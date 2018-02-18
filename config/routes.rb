@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/help', to: "static_pages#help_me"
   root to: "users#index" 
 
-  resources :orders
-  resources :users
+  resources :users do 
+    resources :orders
+  end
 end
