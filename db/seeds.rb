@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = %w{Kasia Maciek Jan Patryk Slawek Mirek Adam Zbyszek Brajan Andzela Szef}
-users.each {|x| User.create(name: x, email: "email@example.com", password: "password") }
+users.each {|user| User.create(name: user, email: "#{name}@example.com", password: "password") }
 
 orders = %w{Zupa Kurczak Ryba}
-orders.each {|x| Order.create(name: x)}
+orders.each {|order| Order.create(name: order)}
 
 User.all.each do |user|
     user.orders.create(name: "Zamowienie #{user.name}")
