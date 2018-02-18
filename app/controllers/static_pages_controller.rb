@@ -6,4 +6,5 @@ class StaticPagesController < ApplicationController
 
     def mission; end
     
+    def help_me; end
 end
